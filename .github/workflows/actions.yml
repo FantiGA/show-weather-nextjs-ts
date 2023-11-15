@@ -27,7 +27,7 @@ jobs:
           touch out/.nojekyll
       - name: Deploy 🚀
         env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          NEXT_PUBLIC_WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
