@@ -1,6 +1,6 @@
 import styles from './page.module.css';
 
-const weatherApiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+const weatherApiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY ?? process.env.WEATHER_API_KEY;
 
 export default function Home() {
   return (
