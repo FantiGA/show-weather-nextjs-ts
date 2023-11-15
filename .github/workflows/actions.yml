@@ -1,0 +1,33 @@
+name: Actions CI - Next.js version 14 static site export, GitHub Actions Build and Deploy
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest source
+        uses: actions/checkout@v3
+      - name: Node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install Pnpm 🧬
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 10
+          run_install: true
+      - name: Install dependencies ⚙️
+        run: pnpm install
+      - name: Build 🏗️
+        run: |
+          npm run build
+          touch out/.nojekyll
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
+          clean: true
