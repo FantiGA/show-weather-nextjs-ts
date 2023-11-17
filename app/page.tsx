@@ -24,7 +24,7 @@ export const getData = async () => {
 };
 
 export const Home = async () => {
-  const data = await getData();
+  // const data = await getData();
 
   return (
     <main className={styles.main}>
