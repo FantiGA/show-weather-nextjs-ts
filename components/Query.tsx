@@ -9,7 +9,7 @@
 "use client";
 
 import styles from "@/styles/query.module.css";
-import { QueryForm } from "@/types/Forms2";
+import { QueryForm } from "@/types/Forms";
 import { Location } from "@/types/Location";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
