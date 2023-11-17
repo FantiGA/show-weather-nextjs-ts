@@ -9,8 +9,8 @@
 "use client";
 
 import styles from "@/styles/query.module.css";
-import { Location } from "@/types/Location";
 import { QueryForm } from "@/types/forms";
+import { Location } from "@/types/Location";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
