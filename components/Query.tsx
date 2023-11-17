@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-16 14:01:05
- * @LastEditTime: 2023-11-17 15:53:29
+ * @LastEditTime: 2023-11-17 18:12:56
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Query.tsx
  */
@@ -9,7 +9,7 @@
 "use client";
 
 import styles from "@/styles/query.module.css";
-import { QueryForm } from "@/types/forms";
+import { QueryForm } from "@/types/Forms";
 import { Location } from "@/types/Location";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -23,7 +23,6 @@ const Query = () => {
     setValue,
   } = useForm<QueryForm>();
   const onSubmit: SubmitHandler<QueryForm> = (data) => console.log(data);
-
 
   const handleInputChange = () => {
     const q = getValues("q").trim();
@@ -55,7 +54,13 @@ const Query = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input className={styles.formInput} type="text" placeholder="Example: (Tokyo) or (0.1234, 5.6789)" {...register("q")} onChange={handleInputChange} />
+      <div className={styles.formItem}>
+        <label className={styles.formLabel}>City or coordinate:</label>
+        <fieldset className={styles.formFieldset}>
+          <input className={styles.formInput} type="text" placeholder="Example: (Tokyo) or (0.1234, 5.6789)" {...register("q")} onChange={handleInputChange} />
+          <button className={styles.formButton}>Query</button>
+        </fieldset>
+      </div>
     </form>
   );
 };
