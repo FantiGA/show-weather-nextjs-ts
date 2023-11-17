@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-16 14:01:05
- * @LastEditTime: 2023-11-17 18:12:56
+ * @LastEditTime: 2023-11-17 18:55:58
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Query.tsx
  */
@@ -9,7 +9,7 @@
 "use client";
 
 import styles from "@/styles/query.module.css";
-import { QueryForm } from "@/types/Forms";
+import { QueryForm } from "@/types/Forms2";
 import { Location } from "@/types/Location";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -39,17 +39,11 @@ const Query = () => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   // Fetch data from API if `location` object is set
-  //   if (location) {
-  //     getData(location);
-  //   }
-  // }, [location]);
-
   useEffect(() => {
     if (!(getValues("q").trim()) && location) {
       setValue("q", `${location.latitude}, ${location.longitude}`);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location?.latitude, location?.longitude]);
 
   return (
