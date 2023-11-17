@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-15 16:54:28
- * @LastEditTime: 2023-11-17 16:17:00
+ * @LastEditTime: 2023-11-17 16:48:12
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/app/page.tsx
  */
@@ -9,7 +9,7 @@ import Query from "@/components/Query";
 import { metadata } from "./layout";
 import styles from "./page.module.css";
 
-export const getData = async () => {
+const getData = async () => {
   const apiBaseUrl = "http://api.weatherapi.com/v1";
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY ?? process.env.WEATHER_API_KEY;
 
@@ -23,8 +23,9 @@ export const getData = async () => {
   return data.location;
 };
 
-export const Home = async () => {
-  // const data = await getData();
+const Home = () => {
+  // eslint-disable-next-line no-unused-vars
+  const data = getData();
 
   return (
     <main className={styles.main}>
