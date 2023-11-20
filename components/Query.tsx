@@ -61,8 +61,12 @@ const Query: FC<QueryProps> = ({ q }) => {
             placeholder="Example: (Tokyo) or (0.1234,5.6789)"
             {...register("q")}
           />
-          <button className={styles.formButton} onClick={handleFillCurrent}>📍</button>
-          <button className={styles.formButton} onClick={handleQuery}>🔍</button>
+          <button className={styles.formButton} onClick={handleFillCurrent}>
+            📍
+          </button>
+          <button className={styles.formButton} onClick={handleQuery}>
+            🔍
+          </button>
         </fieldset>
       </div>
     </form>

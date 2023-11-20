@@ -1,14 +1,13 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-18 20:42:55
- * @LastEditTime: 2023-11-20 15:32:52
+ * @LastEditTime: 2023-11-20 15:34:52
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/app/[q]/page.tsx
  */
 
 import Query from "@/components/Query";
 import { RequestQueryForms, ResultCurrent } from "@/types";
-import Link from "next/link";
 import { metadata } from "../layout";
 import styles from "../page.module.css";
 
@@ -25,7 +24,7 @@ const getData = async (q: string) => {
   return data.location;
 };
 
-export const Forecast = () => <Link href={"/detail"}>Forecast</Link>;
+// export const Forecast = () => <Link href={"/detail"}>Forecast</Link>;
 
 const Home = async ({ params: { q } }: RequestQueryForms) => {
   const data = await getData(q);
