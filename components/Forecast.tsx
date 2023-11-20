@@ -12,7 +12,9 @@ import Link from "next/link";
 
 const Forecast = () => {
   return (
-    <><Link href={"/detail"}>Forecast</Link></>
+    <>
+      <Link href={"/detail"}>Forecast</Link>
+    </>
   );
 };
 

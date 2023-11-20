@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Show Weather App to know the weather on a specific location",
 };
 
-const RootLayout = ({ children }: { children: ReactNode; }) => (
+const RootLayout = ({ children }: { children: ReactNode }) => (
   <html lang="en">
     <body className={inter.className}>{children}</body>
   </html>

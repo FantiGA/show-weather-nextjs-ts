@@ -17,7 +17,8 @@
 
 .formInput {
   margin       : 0;
-  padding      : .5rem 1rem;
+  margin-right : -94px;
+  padding      : 0.5rem 1rem;
   border       : 1px solid #252525;
   border-radius: 5px;
   width        : 100%;
@@ -30,8 +31,12 @@
 }
 
 .formButton {
-  padding      : .5rem 1rem;
-  border       : 1px solid #252525;
-  border-radius: 5px;
-  margin-left  : -5px;
+  margin-top   : 1px;
+  margin-bottom: 1px;
+  padding      : 0.5rem 1rem;
+  border-left  : 1px solid #252525;
+  border-top   : none;
+  border-right : none;
+  border-bottom: none;
+  border-radius: 0 5px 5px 0;
 }
