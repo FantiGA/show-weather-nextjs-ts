@@ -10,3 +10,16 @@ body {
     color: rgba(255, 255, 255, 0.6);
   }
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.grid {
+  width: 100%;
+}

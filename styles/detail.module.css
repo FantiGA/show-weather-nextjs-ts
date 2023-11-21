@@ -1,0 +1,58 @@
+.currentSection {
+  position: relative;
+  margin-bottom: 6px;
+  padding: 0 10px;
+  border: 1px solid #252525;
+  border-radius: 5px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #555;
+    border: 1px solid #ffffff;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.gridContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.gridItem {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.gridItem dl {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.gridItem dl dt,
+.gridItem dl dd {
+  margin: 0 5px;
+}
+
+.gridItem dl dt {
+  font-weight: bold;
+  width: 5rem;
+  text-align: right;
+}
+
+.temperature dt,
+.temperature dd {
+  font-size: x-large;
+}

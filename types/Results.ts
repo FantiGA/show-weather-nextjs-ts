@@ -1,10 +1,12 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-17 11:49:56
- * @LastEditTime: 2023-11-21 11:23:49
+ * @LastEditTime: 2023-11-21 15:15:31
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/types/Results.ts
  */
+
+import { QueryProps } from ".";
 
 interface ResultCondition {
   text: string;
@@ -67,7 +69,7 @@ export interface ResultCurrentLocation {
   localtime: string;
 }
 
-export interface ResultForecastDay {
+export interface ResultForecastDay extends QueryProps {
   date: string;
   date_epoch: number;
   day: {

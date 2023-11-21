@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-20 17:03:35
- * @LastEditTime: 2023-11-21 10:59:47
+ * @LastEditTime: 2023-11-21 17:49:15
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Current.tsx
  */
@@ -27,10 +27,20 @@ const Current: FC<ResultCurrent> = (props) => (
         <h3>{props.current.condition.text}</h3>
       </div>
       <div className={styles.gridItem}>
-        <dl>
-          <dt>Region:</dt>
-          <dd>{props.location.region}</dd>
+        <dl className={styles.temperature}>
+          <dt>{props.current.temp_c}</dt>
+          <dd>°C</dd>
         </dl>
+        <dl>
+          <dt>Name:</dt>
+          <dd>{props.location.name}</dd>
+        </dl>
+        {props.location.region && (
+          <dl>
+            <dt>Region:</dt>
+            <dd>{props.location.region}</dd>
+          </dl>
+        )}
         <dl>
           <dt>Country:</dt>
           <dd>{props.location.country}</dd>
@@ -50,10 +60,6 @@ const Current: FC<ResultCurrent> = (props) => (
         <dl>
           <dt>Pressure:</dt>
           <dd>{props.current.pressure_mb} mb</dd>
-        </dl>
-        <dl className={styles.temperature}>
-          <dt>{props.current.temp_c}</dt>
-          <dd>°C</dd>
         </dl>
       </div>
     </div>
