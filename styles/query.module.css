@@ -1,4 +1,4 @@
-.formItem {
+.queryForm {
   position: relative;
   margin-bottom: 6px;
 }
@@ -12,6 +12,7 @@
   border: none;
   position: relative;
   display: flex;
+  margin: 0;
   padding: 0;
 }
 
@@ -39,4 +40,10 @@
   border-right: none;
   border-bottom: none;
   border-radius: 0 5px 5px 0;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #555;
+    border-left: 1px solid #ffffff;
+    color: rgba(255, 255, 255, 1);
+  }
 }
