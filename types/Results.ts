@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-17 11:49:56
- * @LastEditTime: 2023-11-20 15:30:46
+ * @LastEditTime: 2023-11-21 11:23:49
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/types/Results.ts
  */
@@ -36,7 +36,7 @@ interface ResultHourBase {
   uv: number;
 }
 
-interface ResultHourCurrent extends ResultHourBase {
+export interface ResultHourCurrent extends ResultHourBase {
   last_updated_epoch: number;
   last_updated: string;
 }
@@ -67,7 +67,48 @@ export interface ResultCurrentLocation {
   localtime: string;
 }
 
+export interface ResultForecastDay {
+  date: string;
+  date_epoch: number;
+  day: {
+    maxtemp_c: number;
+    maxtemp_f: number;
+    mintemp_c: number;
+    mintemp_f: number;
+    avgtemp_c: number;
+    avgtemp_f: number;
+    maxwind_mph: number;
+    maxwind_kph: number;
+    totalprecip_mm: number;
+    totalprecip_in: number;
+    totalsnow_cm: number;
+    avgvis_km: number;
+    avgvis_miles: number;
+    avghumidity: number;
+    daily_will_it_rain: number;
+    daily_chance_of_rain: number;
+    daily_will_it_snow: number;
+    daily_chance_of_snow: number;
+    condition: ResultCondition;
+    uv: number;
+  };
+  astro: {
+    sunrise: string;
+    sunset: string;
+    moonrise: string;
+    moonset: string;
+    moon_phase: string;
+    moon_illumination: number;
+    is_moon_up: number;
+    is_sun_up: number;
+  };
+  hour: ResultHour[];
+}
+
 export interface ResultCurrent {
   location: ResultCurrentLocation;
   current: ResultHourCurrent;
+  forecast?: {
+    forecastday: ResultForecastDay[];
+  };
 }
