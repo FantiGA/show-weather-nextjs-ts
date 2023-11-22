@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+.dataList dt {
+  font-size: 1rem;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .dataList {

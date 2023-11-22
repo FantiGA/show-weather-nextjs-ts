@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-16 14:01:05
- * @LastEditTime: 2023-11-22 18:16:25
+ * @LastEditTime: 2023-11-22 22:28:58
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Query.tsx
  */
@@ -57,14 +57,20 @@ const Query: FC<QueryProps> = ({ q }) => {
         <fieldset className={styles.formFieldset}>
           <input
             className={styles.formInput}
+            id="q"
             type="text"
             placeholder="Example: (Tokyo) or (0.1234,5.6789)"
+            autoFocus={true}
             {...register("q")}
           />
-          <button className={styles.formButton} onClick={handleFillCurrent}>
+          <button
+            id="button-fill-current"
+            className={styles.formButton}
+            onClick={handleFillCurrent}
+          >
             📍
           </button>
-          <button className={styles.formButton} onClick={handleQuery}>
+          <button id="button-query" className={styles.formButton} onClick={handleQuery}>
             🔍
           </button>
         </fieldset>
