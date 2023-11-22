@@ -8,4 +8,4 @@
 
 export * from "./getData";
 
-export const NEXT_DAYS_CONFIG = process.env.NEXT_PUBLIC_DAYS ?? process.env.DAYS;
+export const NEXT_DAYS_CONFIG = 10;
