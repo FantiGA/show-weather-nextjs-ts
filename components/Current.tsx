@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-20 17:03:35
- * @LastEditTime: 2023-11-21 17:49:15
+ * @LastEditTime: 2023-11-22 16:04:05
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Current.tsx
  */

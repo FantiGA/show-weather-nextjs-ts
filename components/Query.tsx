@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-16 14:01:05
- * @LastEditTime: 2023-11-21 09:59:22
+ * @LastEditTime: 2023-11-22 18:16:25
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Query.tsx
  */
@@ -53,7 +53,7 @@ const Query: FC<QueryProps> = ({ q }) => {
   return (
     <div className={styles.queryForm}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label className={styles.formLabel}>City or coordinate:</label>
+        <h3 className={styles.formLabel}>Location Input:</h3>
         <fieldset className={styles.formFieldset}>
           <input
             className={styles.formInput}

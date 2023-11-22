@@ -1,10 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
   justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  align-items    : center;
+  padding        : 6rem;
+  min-height     : 100vh;
 }
 
 .grid {
@@ -13,36 +13,80 @@
 
 .description {
   font-size: 0.85rem;
-  width: 100%;
-  z-index: 2;
+  width    : 100%;
+  z-index  : 2;
 }
 
 .description a {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  align-items    : center;
+  gap            : 0.5rem;
 }
 
 .description p {
   position: relative;
-  margin: 0;
-  padding: 1rem;
+  margin  : 0;
+  padding : 1rem;
+}
+
+.forecastList {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-between;
+  margin         : 0 -6px;
+}
+
+.forecastList h3 {
+  width : 100%;
+  margin: 20px 6px 6px;
+}
+
+.forecast {
+  margin       : 6px 6px 0;
+  border       : 1px solid #252525;
+  border-radius: 5px;
+  width        : calc(10% - 14px);
+  min-width    : 64px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #555;
+    border          : 1px solid #ffffff;
+    color           : rgba(255, 255, 255, 1);
+  }
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
-@media (prefers-reduced-motion) {
-}
+@media (prefers-reduced-motion) {}
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    padding: 2rem;
+  }
+
+  .description h1 {
+    text-align: center;
+  }
+
+  .forecast {
+    width    : 100%;
+    min-width: 64px;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+  .main {
+    padding: 4rem;
+  }
+
+  .forecast {
+    width    : calc(20% - 14px);
+    min-width: 64px;
+  }
 }
 
 @keyframes rotate {
