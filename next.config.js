@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-15 16:54:28
- * @LastEditTime: 2023-11-22 19:08:45
+ * @LastEditTime: 2023-11-22 19:10:35
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/next.config.js
  */
@@ -9,7 +9,7 @@
 const nextConfig = {
   publicRuntimeConfig: {
     NEXT_PUBLIC_WEATHER_API_KEY: process.env.NEXT_PUBLIC_WEATHER_API_KEY,
-    NEXT_PUBLIC_DAYS: process.env.DAYS,
+    NEXT_PUBLIC_DAYS: process.env.NEXT_PUBLIC_DAYS,
   },
   images: {
     remotePatterns: [
