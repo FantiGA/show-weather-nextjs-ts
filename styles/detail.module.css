@@ -1,44 +1,44 @@
 .currentSection {
-  position     : relative;
+  position: relative;
   margin-bottom: 6px;
-  padding      : 0 10px;
-  border       : 1px solid #252525;
+  padding: 0 10px;
+  border: 1px solid #252525;
   border-radius: 5px;
 
   @media (prefers-color-scheme: dark) {
     background-color: #555;
-    border          : 1px solid #ffffff;
-    color           : rgba(255, 255, 255, 1);
+    border: 1px solid #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
 }
 
 .gridContainer {
-  display        : flex;
+  display: flex;
   justify-content: space-between;
-  align-items    : flex-start;
-  margin-bottom  : 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .condition {
-  display       : flex;
+  display: flex;
   flex-direction: column;
-  align-items   : center;
-  width         : 60%;
-  align-self    : center;
-  margin-bottom : 30px;
+  align-items: center;
+  width: 60%;
+  align-self: center;
+  margin-bottom: 30px;
 }
 
 .gridItem {
-  display       : flex;
-  align-items   : flex-start;
+  display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  flex-grow     : 1;
+  flex-grow: 1;
 }
 
 .gridItem dl {
-  display    : flex;
+  display: flex;
   align-items: center;
-  margin     : 5px 0;
+  margin: 5px 0;
 }
 
 .gridItem dl dt,
@@ -48,8 +48,8 @@
 
 .gridItem dl dt {
   font-weight: bold;
-  width      : 5rem;
-  text-align : right;
+  width: 5rem;
+  text-align: right;
 }
 
 .temperature dt,
@@ -65,7 +65,7 @@
 
   .gridContainer {
     flex-direction: column;
-    align-items   : center;
+    align-items: center;
   }
 
   .condition {
@@ -91,4 +91,5 @@
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {}
+@media (min-width: 701px) and (max-width: 1120px) {
+}

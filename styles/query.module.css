@@ -1,49 +1,49 @@
 .queryForm {
-  position     : relative;
+  position: relative;
   margin-bottom: 6px;
 }
 
 .formLabel {
-  width : 100%;
+  width: 100%;
   margin: 20px 0 6px;
 }
 
 .formFieldset {
-  border  : none;
+  border: none;
   position: relative;
-  display : flex;
-  margin  : 0;
-  padding : 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .formInput {
-  margin       : 0;
-  margin-right : -94px;
-  padding      : 0.5rem 1rem;
-  border       : 1px solid #252525;
+  margin: 0;
+  margin-right: -94px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #252525;
   border-radius: 5px;
-  width        : 100%;
+  width: 100%;
 
   @media (prefers-color-scheme: dark) {
     background-color: #555;
-    border          : 1px solid #ffffff;
-    color           : rgba(255, 255, 255, 1);
+    border: 1px solid #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
 }
 
 .formButton {
-  margin-top   : 1px;
+  margin-top: 1px;
   margin-bottom: 1px;
-  padding      : 0.5rem 1rem;
-  border-left  : 1px solid #252525;
-  border-top   : none;
-  border-right : none;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid #252525;
+  border-top: none;
+  border-right: none;
   border-bottom: none;
   border-radius: 0 5px 5px 0;
 
   @media (prefers-color-scheme: dark) {
     background-color: #555;
-    border-left     : 1px solid #ffffff;
-    color           : rgba(255, 255, 255, 1);
+    border-left: 1px solid #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
 }
