@@ -86,6 +86,8 @@ You can also visit a [demo](https://show-weather-nextjs-ts.vercel.app) already d
 
 This is the first time I have used `Next.js` and `Cypress`. It took a lot of time to read the documentation and make too many failed attempts in the early stage.
 
+Regarding the use of `Next.js` to obtain data asynchronously, and the issue of environment variables deployed by `Next.js` on `GitHub Pages`, I used `ChatGPT`. But obviously `ChatGPT` couldn’t give me the latest version of the answer, so I didn’t get any substantial help.
+
 ### Several difficulties that impressed me deeply
 
 1. Since the latest `Next.js` 14 version is used this time, some textbooks and problem cases on `Stack Overflow` are even from `Next.js` 10 version and `React` 17 version. I can only look for relevant clues in the official documents, and then slowly explore it myself.
