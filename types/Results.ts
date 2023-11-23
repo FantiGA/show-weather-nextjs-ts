@@ -27,7 +27,7 @@ interface ResultHourBase {
   temp_c: number;
   /** Temperature in fahrenheit */
   temp_f: number;
-  /** 
+  /**
    * Whether to show day condition icon or night icon.
    * 1 = Yes, 0 = No
    */
@@ -94,7 +94,7 @@ export interface ResultHour extends ResultHourBase {
   dewpoint_c: number;
   /** Dew point in fahrenheit */
   dewpoint_f: number;
-  /** 
+  /**
    * Will it will rain or not
    * 1 = Yes, 0 = No
    */
@@ -189,7 +189,7 @@ export interface ResultForecastDay extends QueryProps {
     moonrise: string;
     /** Moonset time */
     moonset: string;
-    /** 
+    /**
      * Moon phases. Value returned:
      * - New Moon
      * - Waxing Crescent

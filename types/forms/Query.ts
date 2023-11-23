@@ -25,7 +25,7 @@ export interface QueryForms {
   /**
    * Restrict date output for Forecast and History API method.
    * Required for History and Future API.
-   * 
+   *
    * - For history API 'dt' should be on or after 1st Jan, 2010 in yyyy-MM-dd format (i.e. dt=2010-01-01)
    * - For forecast API 'dt' should be between today and next 14 day in yyyy-MM-dd format (i.e. dt=2010-01-01)
    * - For future API 'dt' should be between 14 days and 300 days from today in the future in yyyy-MM-dd format (i.e. dt=2023-01-01)

@@ -15,7 +15,10 @@ import { NEXT_DAYS_CONFIG } from ".";
  * @param {string | undefined} dt specific date
  * @returns {Promise<ResultCurrent | undefined>}
  */
-export const getData = async (q: string, dt: string | undefined = undefined): Promise<ResultCurrent | undefined> => {
+export const getData = async (
+  q: string,
+  dt: string | undefined = undefined,
+): Promise<ResultCurrent | undefined> => {
   /** Combining API URLs */
   const apiBaseUrl = "https://api.weatherapi.com/v1";
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY ?? process.env.WEATHER_API_KEY;
