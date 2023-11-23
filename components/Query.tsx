@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-16 14:01:05
- * @LastEditTime: 2023-11-22 22:28:58
+ * @LastEditTime: 2023-11-23 20:07:43
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Query.tsx
  */
@@ -23,6 +23,9 @@ const Query: FC<QueryProps> = ({ q }) => {
     handleQuery();
   };
 
+  /**
+   * Get the current coordinates and fill in the field `q`. Then initiate a request.
+   */
   const handleFillCurrent = useCallback(() => {
     if (!getValues("q").trim() && location) {
       const newValue = `${location.latitude},${location.longitude}`;
@@ -31,14 +34,19 @@ const Query: FC<QueryProps> = ({ q }) => {
     }
   }, [getValues, location, router, setValue]);
 
+  /**
+   * Then initiate a request.
+   */
   const handleQuery = () => {
     const q = getValues("q").trim();
     router.push(`/${q}`);
   };
 
+  /**
+   * Retrieve latitude & longitude coordinates from `navigator.geolocation` Web API
+   */
   useEffect(() => {
     if ("geolocation" in navigator) {
-      // Retrieve latitude & longitude coordinates from `navigator.geolocation` Web API
       navigator.geolocation.getCurrentPosition(({ coords }) => {
         const { latitude, longitude } = coords;
         setLocation({ latitude, longitude });
@@ -46,6 +54,10 @@ const Query: FC<QueryProps> = ({ q }) => {
     }
   }, []);
 
+  /**
+   * If a value for `q` is passed in,
+   * refill it into `q`.
+   */
   useEffect(() => {
     q && setValue("q", q);
   }, [q, setValue]);

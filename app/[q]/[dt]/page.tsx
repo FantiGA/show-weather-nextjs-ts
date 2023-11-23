@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-17 18:47:26
- * @LastEditTime: 2023-11-21 17:37:15
+ * @LastEditTime: 2023-11-23 20:16:00
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/app/[q]/[dt]/page.tsx
  */
@@ -25,6 +25,7 @@ const Page = async ({ params: { q, dt } }: RequestQueryForms) => {
     return;
   }
 
+  // Convert string date into Date object
   const date = new Date(dt);
 
   return (

@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-21 17:20:30
- * @LastEditTime: 2023-11-21 17:48:37
+ * @LastEditTime: 2023-11-23 20:11:06
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Detail.tsx
  */
@@ -14,6 +14,7 @@ import Image from "next/image";
 import { FC } from "react";
 
 const Detail: FC<ResultForecastDay> = (props) => {
+  // Convert string date into Date object
   const date = new Date(props.date);
 
   return (
@@ -24,8 +25,8 @@ const Detail: FC<ResultForecastDay> = (props) => {
           <Image
             src={`https:${props.day.condition.icon}`}
             alt={props.day.condition.text}
-            width={64}
-            height={64}
+            width={128}
+            height={128}
           />
           <h3>{props.day.condition.text}</h3>
         </div>

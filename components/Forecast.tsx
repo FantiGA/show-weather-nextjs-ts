@@ -15,6 +15,7 @@ import Link from "next/link";
 import { FC } from "react";
 
 const Forecast: FC<ResultForecastDay> = (props) => {
+  // Convert string date into Date object
   const date = new Date(props.date);
 
   return (

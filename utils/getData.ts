@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-21 14:54:50
- * @LastEditTime: 2023-11-22 17:26:42
+ * @LastEditTime: 2023-11-23 19:09:39
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/utils/getData.ts
  */
@@ -9,7 +9,14 @@
 import { ResultCurrent } from "@/types";
 import { NEXT_DAYS_CONFIG } from ".";
 
-export const getData = async (q: string, dt: string | undefined = undefined) => {
+/**
+ * Get data asynchronously from the Weather API
+ * @param {string} q query string
+ * @param {string | undefined} dt specific date
+ * @returns {Promise<ResultCurrent | undefined>}
+ */
+export const getData = async (q: string, dt: string | undefined = undefined): Promise<ResultCurrent | undefined> => {
+  /** Combining API URLs */
   const apiBaseUrl = "https://api.weatherapi.com/v1";
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY ?? process.env.WEATHER_API_KEY;
 

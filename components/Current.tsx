@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-20 17:03:35
- * @LastEditTime: 2023-11-22 16:04:05
+ * @LastEditTime: 2023-11-23 20:11:28
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Current.tsx
  */
@@ -21,8 +21,8 @@ const Current: FC<ResultCurrent> = (props) => (
         <Image
           src={`https:${props.current.condition.icon}`}
           alt={props.current.condition.text}
-          width={64}
-          height={64}
+          width={128}
+          height={128}
         />
         <h3>{props.current.condition.text}</h3>
       </div>
