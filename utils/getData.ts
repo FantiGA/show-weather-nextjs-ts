@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-21 14:54:50
- * @LastEditTime: 2023-11-23 19:09:39
+ * @LastEditTime: 2023-11-26 14:46:14
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/utils/getData.ts
  */
@@ -33,7 +33,7 @@ export const getData = async (
       cache: "force-cache",
     });
   } catch (error) {
-    console.error(error);
+    console.error("Error: ", error);
     return;
   }
 
@@ -41,7 +41,7 @@ export const getData = async (
   try {
     data = await response.json();
   } catch (error) {
-    console.error(error);
+    console.error("Error: ", error);
     return;
   }
 

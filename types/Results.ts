@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-17 11:49:56
- * @LastEditTime: 2023-11-23 19:55:02
+ * @LastEditTime: 2023-11-26 14:05:19
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/types/Results.ts
  */
@@ -11,7 +11,7 @@
  * https://www.weatherapi.com/docs
  */
 
-import { QueryProps } from ".";
+import { QueryProps, ResultError } from ".";
 
 interface ResultCondition {
   /** Weather condition text */
@@ -215,4 +215,5 @@ export interface ResultCurrent {
   forecast?: {
     forecastday: ResultForecastDay[];
   };
+  error?: ResultError;
 }

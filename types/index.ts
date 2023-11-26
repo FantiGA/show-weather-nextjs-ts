@@ -6,6 +6,7 @@
  * @FilePath: /show-weather-nextjs-ts/types/index.ts
  */
 
+export * from "./Error";
 export * from "./Location";
 export * from "./Results";
 export * from "./forms";
