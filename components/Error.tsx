@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-26 13:57:18
- * @LastEditTime: 2023-11-26 14:32:47
+ * @LastEditTime: 2023-11-26 14:58:20
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/components/Error.tsx
  */
@@ -21,7 +21,7 @@ const Error: FC<ResultError> = ({ code, message }) => {
   return (
     <div className={styles.errorMessage}>
       <h3>Something went wrong!</h3>
-      <p>Error code: {code}</p>
+      {code && <p>Error code: {code}</p>}
       <p>Error message: {message}</p>
     </div>
   );

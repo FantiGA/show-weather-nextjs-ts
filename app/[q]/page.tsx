@@ -1,7 +1,7 @@
 /*
  * @Author: fantiga
  * @Date: 2023-11-18 20:42:55
- * @LastEditTime: 2023-11-26 14:47:31
+ * @LastEditTime: 2023-11-26 15:24:17
  * @LastEditors: fantiga
  * @FilePath: /show-weather-nextjs-ts/app/[q]/page.tsx
  */
@@ -10,7 +10,7 @@ import Current from "@/components/Current";
 import Error from "@/components/Error";
 import Forecast from "@/components/Forecast";
 import Query from "@/components/Query";
-import { RequestQueryForms } from "@/types";
+import { RequestQueryForms, ResultError } from "@/types";
 import { NEXT_DAYS_CONFIG, getData } from "@/utils";
 import { metadata } from "../layout";
 import styles from "../page.module.css";
@@ -19,8 +19,8 @@ const Page = async ({ params: { q } }: RequestQueryForms) => {
   const data = await getData(q);
 
   if (!data) {
-    console.error("The API got some error!");
-    return;
+    const error: ResultError = { message: "The API got some error!" };
+    return <Error {...error} />;
   }
 
   return (
